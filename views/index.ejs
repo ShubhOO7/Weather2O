@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="photo/favicon.ico">
+    <title> Weather </title>
+</head>
+<body>
+    <div class="container c1">
+        <div class="c1-a">
+            <div class="c1-a1">
+                <form method="post" action="/">
+                    <input name="cityName" type="text" class="search-bar" placeholder="Search for Places.." autocomplete="off" >
+                    <button type="submit" class="btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="c1-a2">
+                <img src= "photo/<%= image %>.png"  alt="Weather Image" class= "img">
+            </div>
+            <div class="c1-a3">
+               <h1 class="number1"><%= temp %> </h1><h2>℃</h2> 
+            </div>
+            <div class="c1-a4">
+                <h2 class="heading" ><%= day %> </h2>
+            </div>
+            <div class="c1-a5">
+                <h3 class="heading"><%= info %> </h3>
+            </div>
+            <div class="c1-a6">
+                <h1><%= place %> </h1>
+            </div>
+        </div>
+        <div class="c1-b">
+            <div class="c1-b1" class="heading2" >
+                 Weather Alert
+            </div>
+            <div class="c1-b2">
+                <p><h2>AQI  is in unhealthy  state . </h2> Health effects can be immediately felt by sensitive groups. Healthy individuals may experience difficulty breathing and throat irritation with prolonged exposure. Limit outdoor activity.</p>
+            </div>
+            <div class="c1-b1" class="heading2">
+                Today's Highlights
+            </div>
+            <div class="c1-b4">
+                
+                <div class="c1-b4-1">
+                    <h2 class="heading" > Min & Max Temp. </h2>
+                    <h3 class="number2"><img src="https://img.icons8.com/material-outlined/24/000000/circled-up-2.png"/> <%= minimum %> °C </h3> 
+                    <h3 class="number2"><img src="https://img.icons8.com/material-outlined/24/000000/circled-down-2.png"/>  <%= maximum %> °C </h3>
+                </div>
+                <div class="c1-b4-1">
+                    <h2 class="heading"> Wind Status </h2>
+                    <div class="c1-b4-2a"> 
+                        <h3 class="number" class="no"><%= windSpeed %></h3><h3 class="no" >Km/hr</h3>
+                    </div>
+                </div>
+                <div class="c1-b4-1">
+                    <h2 class="heading" > Sunrise & Sunset </h2>
+                    <h3 class="number2"> <img src="https://img.icons8.com/ios/40/000000/sunrise--v2.png"/><%= sunrise %> </h3>
+                    <h3 class="number2"> <img src="https://img.icons8.com/external-phatplus-lineal-phatplus/35/000000/external-sunset-weather-phatplus-lineal-phatplus.png"/> <%= sunset %> </h3>
+                </div>
+                <div class="c1-b4-2">
+                    <h2 class="heading" > Pressure </h2>
+                    <div class="c1-b4-2a"> 
+                        <h3 class="number" class="no"> <%= pressure %></h3><h3 class="no" >hPa</h3>
+                    </div>
+                    
+                </div>
+                <div class="c1-b4-2">
+                    <h2 class="heading" > Humidity </h2>
+                    <div class="c1-b4-2a"> 
+                        <h3 class="number" class="no"> <%= humidity %>  </h3> <h4 class="no">%</h4>
+                    </div>
+                    
+                </div>
+                <div class="c1-b4-2">
+                    <h2  class="heading"  > Visibility </h2>
+                    <div class="c1-b4-2a"> 
+                        <h3 class="number" class="no" ><%= visibility %></h3><h3 class="no" >Km</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
