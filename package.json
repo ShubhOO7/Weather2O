@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "npm app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "author": "Shubham Kanojia",
   "license": "ISC",
