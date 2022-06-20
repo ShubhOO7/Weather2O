@@ -36,6 +36,9 @@ app.get('/', (req, res) =>{
         maximum : "34.73"
     });
 });
+app.get('/error',(req, res) => {
+    res.render ("error");
+})
 app.post('/', (req, res) =>{
       var weekday = ['Sunday', 'Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday', 'Saturday'];
       var today = new Date();
@@ -52,7 +55,7 @@ app.post('/', (req, res) =>{
               const WeatherData = JSON.parse(data);
             //   console.log(WeatherData);
               if(WeatherData.cod == 404 ){
-                  res.redirect('/');
+                  res.redirect('/error');
               }else{
                 const temperature = WeatherData.main.temp ;
                 const location = WeatherData.name;
@@ -60,8 +63,8 @@ app.post('/', (req, res) =>{
                 const description = WeatherData.weather[0].description;
                 const icon = WeatherData.weather[0].icon;
                 let iconURl =  "weather";
-                const rise =  new Date(WeatherData.sys.sunrise).toLocaleTimeString("en-US");
-                const set =  new Date(WeatherData.sys.sunset).toLocaleTimeString("en-US");
+                const rise =  new Date(WeatherData.sys.sunrise * 1000 ).toLocaleTimeString("en-US" , { hour: "numeric" , minute: "numeric" } );
+                const set =  new  Date(WeatherData.sys.sunset * 1000 ).toLocaleTimeString("en-US" , { hour: "numeric" , minute: "numeric" } )
                 const pres = WeatherData.main.pressure;
                 const humid = WeatherData.main.humidity;
                 const visib = WeatherData.visibility / 1000;
